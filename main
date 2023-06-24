@@ -1,0 +1,32 @@
+import subprocess as sp
+import shit
+try: 
+    import pyautogui as pg
+except:
+    print("[ ERROR ] This tool heavily relies on PyAutoGUI. You can continue without it, but some features will not work.")
+
+listOfCommands = ["NumberBrute", "AutoClick", "SSHMaster", "Pageabrute"]
+
+
+#you piece of shit why didnnt you leave a single goddamn comment
+#im not gonna either but still
+
+
+while True:
+    shit.welcomeUser(listOfCommands)
+    request = input("Which command would you like to access?") #ask user what command they want
+
+    if request.lower() == "numberbrute" or request.lower() == "nb":
+        shit.numberbrute()
+    elif request.lower() == "autoclick" or request.lower() == "ac":
+        shit.autoclickutil()
+    elif request.lower() == "sabotage" or request.lower() == "sb":
+        confirmSabotage = input("WARNING: This will run indefinite stress tests on your computer. THIS HAS A CHANCE TO DAMAGE YOUR PC, USE IT AT YOUR OWN PERIL. \n Type \"y\" to continue")
+        if confirmSabotage == "y":
+            shit.sabotageutil()
+    
+    
+    
+    
+    else:
+        print("Error: Command \' " + request + " \' does not exist.")
