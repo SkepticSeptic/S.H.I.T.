@@ -14,3 +14,7 @@ On linux/unix (MacOS as well):
 On Windows:
   1. Install linux
   2. Go to step 1 of linux instructions
+
+
+Note: some features require an API key from websites such as vulnDB, make sure to set them up in APIKeys.py 
+These API keys are not required when running the application in lightweight mode.
