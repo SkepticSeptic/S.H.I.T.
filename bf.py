@@ -15,4 +15,4 @@ def bruteforce(wordlist):
             pg.press('enter')
             pg.press('enter')
             
-bruteforce("ry")
+#bruteforce("ry")
