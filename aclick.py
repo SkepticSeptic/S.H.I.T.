@@ -2,10 +2,15 @@ import os
 import time as t
 import pyautogui as pg
 import threading
+import color
 def aclick():
     while True:
         pcCores = int(os.cpu_count())
-        intensity = int(input("PC Contains " + str(pcCores) + " cores. Set intensity to: (1 to 5 recommended, dangerous going above that.)"))
+        intensity = str(input("PC Contains " + str(pcCores) + " cores. Set intensity to: (1 to 5 recommended, dangerous going above that.)"))
+        if intensity == "..":
+            break
+        else:
+            intensity = int(intensity)
 
         pcStrength = pcCores * intensity
         totalClicks = 0
@@ -28,9 +33,9 @@ def aclick():
                 th.join()
             end_time = t.time()
             elapsed_time = end_time - start_time
-            print("(" + str(j+1) + "/" + str(rnge) + ") " + "iteration done in " + str(elapsed_time) + " seconds.")
+            print(color.progress("(" + str(j+1) + "/" + str(rnge) + ") " + "iteration done in " + str(elapsed_time) + " seconds."))
         #print("Total clicks:", totalClicks)
 
         main_endTime = t.time()
         main_elapsedTime = main_endTime - main_time
-        print("full thing completed in: " + str(main_elapsedTime) + " seconds.")
+        print(color.success("full thing completed in: " + str(main_elapsedTime) + " seconds."))

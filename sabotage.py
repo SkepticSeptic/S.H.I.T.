@@ -5,7 +5,7 @@ import pyautogui as pg
 def sabotage():
     pg.typewrite("chmod +x sb.sh")
     pg.press('enter')
-
+    
     file_to_open = "./sb.sh"  # Replace with the path of the file you want to open
     num_threads = 10  # Replace with the number of threads you want to run at the same time
 
